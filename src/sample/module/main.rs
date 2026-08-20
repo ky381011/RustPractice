@@ -1,16 +1,5 @@
-// ── インラインモジュール定義 ──────────────────────────────────
-mod greetings {
-    pub fn hello(name: &str) -> String {
-        format!("Hello, {}!", name)
-    }
-
-    // ネストしたモジュール
-    pub mod formal {
-        pub fn hello(name: &str) -> String {
-            format!("Good day, {}.", name)
-        }
-    }
-}
+// greetings.rs を同じディレクトリから読み込む
+mod greetings;
 
 // use でパスを短縮
 use greetings::formal;
